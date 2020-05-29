@@ -1,18 +1,27 @@
-sudo: false
 dist: trusty
-
 language: c++
-
 git:
   submodules: false
-
 os:
-  - linux
-  - osx
-  - windows
+- linux
+- osx
+- windows
 
 script:
-  - mkdir build
-  - cd build
-  - cmake .. -DCMAKE_INSTALL_PREFIX=`pwd`/_install
-  - cmake --build . --target package
+- mkdir build
+- cd build
+- cmake .. -DCMAKE_INSTALL_PREFIX=`pwd`/_install
+- cmake --build . --target package
+
+deploy:
+  provider: releases
+  api_key:
+    secure: XQN5rSbchCRSO9lB/8c530nxiPXGwtHgWqunsIfxLsYD6rK3q1HLDnQcyJQlFCTa+kxFkndhuUPLl2e512szc5UJezuY2tQQlgCXBF1iK80+vN5m3tplnPUWz3y/WH86m6XTG4Ev43/VGWjzFZJfDsa9NDch9nFAUYFrXU47gSO3UXxBd2Bj7tWakzdU3so+MdYGB2HsY1CEw8LoimfUhzm/ywaccgVZCz/lSK7r83/w/4is27nRVggJ0B1v+Ovp2l/gl5TjyA0y355Voe8zHNwHUEx/l/9M/XXJ0yFsx7s0llIMYGVrjHTKjFRXNSdmAqk1wEO97Gq/xzNVU9dbR4NZVpgNrvrW+jddrTy90gp+CP5t2pUmERuA/ggWnk+/xGSvgR5r74cflnTn3LphYd4v8NwFF3CFZUOhviE3/b/oFvJeU7HK3CbdL5bFSPtmZT6j2jOPnLYDUzIGeZUjJV3MsYbVmLYm6W/pxlkjEXQoMMr/ToJcMrUUdNOUE7fWYGHIDvVwAW4oPPchUuXgXzWvisMcuYH+eVDW0kjhl0AdoK7/tLW0rrXKHRlw/5b0536t+ZibHz89U3LOJ4R3ojYpFnZM0BeVo4Cq9oFbz38/Foyxp14bLZg1ZGPBqQ0qWxKqlGSdL2Pjtc7E+rOm/FT/Iv9PQiNQYxZdklFWpGI=
+    skip_cleanup: 'true'
+  file_glob: true
+  file: build/native*
+  on:
+    tags: true
+    repo: Cyberunner23/TravisReleasePoC
+    branch: master
+
