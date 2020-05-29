@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(TravisReleasePoC)
+cmake_minimum_required(VERSION 3.0)
+project(TravisReleasePoC VERSION 0.0.1)
 
 #**********************************************************
 # C++11
@@ -26,11 +26,5 @@ install(TARGETS native
 set(CPACK_GENERATOR ZIP)
 set(CPACK_PACKAGE_NAME "native")
 set(CPACK_PACKAGE_VENDOR "Alex FL")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "test")
-set(CPACK_PACKAGE_VERSION "1.0.0")
-set(CPACK_PACKAGE_VERSION_MAJOR "1")
-set(CPACK_PACKAGE_VERSION_MINOR "0")
-set(CPACK_PACKAGE_VERSION_PATCH "0")
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "output")
 
 INCLUDE(CPack)
