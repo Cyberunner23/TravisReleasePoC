@@ -4,4 +4,4 @@
 #define LIB_EXPORT
 #endif
 
-extern "C"  int getNumber() { return 8; }
+extern "C"  int getNumber() { return 9; }
