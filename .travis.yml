@@ -6,7 +6,7 @@ os:
 - linux
 - osx
 - windows
-
+- 
 script:
 - mkdir build
 - cd build
@@ -16,7 +16,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: XQN5rSbchCRSO9lB/8c530nxiPXGwtHgWqunsIfxLsYD6rK3q1HLDnQcyJQlFCTa+kxFkndhuUPLl2e512szc5UJezuY2tQQlgCXBF1iK80+vN5m3tplnPUWz3y/WH86m6XTG4Ev43/VGWjzFZJfDsa9NDch9nFAUYFrXU47gSO3UXxBd2Bj7tWakzdU3so+MdYGB2HsY1CEw8LoimfUhzm/ywaccgVZCz/lSK7r83/w/4is27nRVggJ0B1v+Ovp2l/gl5TjyA0y355Voe8zHNwHUEx/l/9M/XXJ0yFsx7s0llIMYGVrjHTKjFRXNSdmAqk1wEO97Gq/xzNVU9dbR4NZVpgNrvrW+jddrTy90gp+CP5t2pUmERuA/ggWnk+/xGSvgR5r74cflnTn3LphYd4v8NwFF3CFZUOhviE3/b/oFvJeU7HK3CbdL5bFSPtmZT6j2jOPnLYDUzIGeZUjJV3MsYbVmLYm6W/pxlkjEXQoMMr/ToJcMrUUdNOUE7fWYGHIDvVwAW4oPPchUuXgXzWvisMcuYH+eVDW0kjhl0AdoK7/tLW0rrXKHRlw/5b0536t+ZibHz89U3LOJ4R3ojYpFnZM0BeVo4Cq9oFbz38/Foyxp14bLZg1ZGPBqQ0qWxKqlGSdL2Pjtc7E+rOm/FT/Iv9PQiNQYxZdklFWpGI=
+    secure: OssWqsdKdiS8vyLulzumkN+8s11+09EiiMGFtAXvowyz1IxXklujxQ4pquyyfCIt6i1vmG4rY8DnkO2lyb7msYzV2Z4udHMJaG0ribg/vEWaXPPafYDbU5QPtLdjWyUuabz92DhBw0IYyvsw+f2HU0at7dd6PkXERBB823WIQl/wk2WKPg0cQKyBiwPv9Knj13YclmZGwdy3g1IQLmIHtg6SEFuRL8wbPkkyvKf6LkDmJh1vBelcp9RmBupiEVu/CtgkwMrS/gLo0dGO7C8Z6dXqCuGg9RnBTiKD6T94ZMoDNw+gGYp2QJdSQkeJCaiX2cC/3KGS+EyIx5d0+3lbmCFlPQjdQNVX4FOJa5eJrLiJNtUeY/ytdQ6K3ZDRlvgjgg20CVJDssCG1psOJN3fez1PfzZLkvC3rzFsuZ0yGf308QuRvdfvorBte2Lv0hCO+D86FQp1gmOUF6a+4UzlgcgFOzm6Gz04NJpWYdhOUFoOCjkMu+L/Lyn2IUlrgAARvxD00Fm/Jr4bLY8+S3eTJOKOsNvGWBUVNa6vDfo31f/ehZWSJ1IJBKQ1rNebtoWF99sDLva8xaMmOLc6NrujUDVVh/X7kgyRsSNM+mCq0WpKD+F4cIw3XYtT6PYVc9WTvtqotc82XwMrjbNN3l8q9rh20Nv1ehAxs0G5TvGM+eo=
   skip_cleanup: 'true'
   file_glob: true
   file: build/native*
@@ -24,4 +24,3 @@ deploy:
     tags: true
     repo: Cyberunner23/TravisReleasePoC
     branch: master
-
